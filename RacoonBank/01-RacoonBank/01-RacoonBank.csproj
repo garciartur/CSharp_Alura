@@ -44,7 +44,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BankClient.cs" />
-    <Compile Include="BonusManagement.cs" />
     <Compile Include="CheckingAccount.cs" />
     <Compile Include="CommercialPartner.cs" />
     <Compile Include="Employees\AccountManager.cs" />
