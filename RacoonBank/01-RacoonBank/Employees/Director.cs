@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace _01_RacoonBank.Employees
 {
-    public class Director : Authenticable
+    public class Director : AuthenticableEmployee
     {
         public Director(double empSalary, string empCPF) : base(empSalary, empCPF) { }
 
@@ -20,7 +20,5 @@ namespace _01_RacoonBank.Employees
         {
             return EmpSalary;
         }
-
-
     }
 }

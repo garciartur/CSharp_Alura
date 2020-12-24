@@ -7,16 +7,8 @@ using System.Threading.Tasks;
 
 namespace _01_RacoonBank.Systems
 {
-    public abstract class Authenticable : Employee
+    public interface IAuthenticable
     {
-        public string Password { get; set; }
-
-        public Authenticable(double empSalary, string empCPF) : base(empSalary, empCPF) { }
-
-        public bool Authenticate(string password)
-        {
-            return Password == password;
-        }
-
+        bool Authenticate(string password);
     }
 }

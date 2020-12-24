@@ -1,5 +1,4 @@
-﻿using _01_RacoonBank.Systems;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace _01_RacoonBank.Employees
 {
-    public class AccountManager : Authenticable
+    public class AccountManager : AuthenticableEmployee
     {
         public AccountManager(double empSalary, string empCPF) : base(empSalary, empCPF) { }
 

@@ -46,9 +46,12 @@
     <Compile Include="BankClient.cs" />
     <Compile Include="BonusManagement.cs" />
     <Compile Include="CheckingAccount.cs" />
+    <Compile Include="CommercialPartner.cs" />
     <Compile Include="Employees\AccountManager.cs" />
     <Compile Include="Employees\Assistant.cs" />
-    <Compile Include="Systems\Authenticable.cs" />
+    <Compile Include="Employees\Authenticable.cs" />
+    <Compile Include="Employees\AuthenticableEmployee.cs" />
+    <Compile Include="Systems\IAuthenticable.cs" />
     <Compile Include="Employees\Designer.cs" />
     <Compile Include="Employees\Developer.cs" />
     <Compile Include="Employees\Director.cs" />
