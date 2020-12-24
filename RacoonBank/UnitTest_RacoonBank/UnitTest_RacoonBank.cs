@@ -214,4 +214,43 @@ namespace UnitTest_RacoonBank
             Assert.AreEqual(ret, bonus);
         }
     }
+
+    [TestClass]
+    public class UnitTest_AccountManager
+    {
+        AccountManager accountManager;
+
+        [TestInitialize]
+        public void Initializer()
+        {
+            accountManager = new AccountManager(6500, "743.458.090-96");
+        }
+
+        [TestMethod]
+        public void TestIncreaseSalary_ShouldReturnEmpSalaryPlusFivePercent()
+        {
+            //arrange
+            double increasedSalary = accountManager.EmpSalary * 1.05;
+
+            //act
+            accountManager.increaseSalary();
+            double ret = accountManager.EmpSalary;
+
+            //assert
+            Assert.AreEqual(ret, increasedSalary);
+        }
+
+        [TestMethod]
+        public void TestGetBonus_ShouldReturnTwentyFivePercentOfEmpSalary()
+        {
+            //arrange
+            double bonus = accountManager.EmpSalary * 1.25;
+
+            //act     
+            double ret = accountManager.GetBonus();
+
+            //assert
+            Assert.AreEqual(ret, bonus);
+        }
+    }
 }
