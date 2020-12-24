@@ -6,58 +6,48 @@
         public int BankBranch { get; set; }
         public int AccountNumber { get; set; }
         public static int CheckingAccountQty { get; private set; }
-        private double _accountBalance = 100;
+        public double AccountBalance { get; private set; }
 
         public CheckingAccount(int accountNumber, int bankBranch)
         {
             this.AccountNumber = accountNumber;
             this.BankBranch = bankBranch;
             CheckingAccountQty++;
+            AccountBalance = 100;
         }
 
 
-        public double AccountBalance
+        public double SetAccountBalance
         {
-            get
-            {
-                return _accountBalance;
-            }
-            
             set
             {
                 if (value < 0) return;
-                _accountBalance = value;
-            }
-                
+                AccountBalance = value;
+            }               
         }
 
-        public double GetAccountBalance()
+        public bool Withdraw(double amount)
         {
-            return _accountBalance;
-        }
-
-        public bool ToWithdraw(double amount)
-        {
-            if (this._accountBalance < amount) return false;
+            if (this.AccountBalance < amount) return false;
             else
             {
-                this._accountBalance -= amount;
+                this.AccountBalance -= amount;
                 return true;
             }
         }
 
-        public void ToDeposit(double amount)
+        public void Deposit(double amount)
         {
-            this._accountBalance += amount;
+            this.AccountBalance += amount;
         }
 
-        public bool ToTransfer(double amount, CheckingAccount destinationAccount)
+        public bool Transfer(double amount, CheckingAccount destinationAccount)
         {
-            if (this._accountBalance < amount) return false;
+            if (this.AccountBalance < amount) return false;
             else
             {
-                this._accountBalance -= amount;
-                destinationAccount.ToDeposit(amount);
+                this.AccountBalance -= amount;
+                destinationAccount.Deposit(amount);
                 return true;
             }
         }

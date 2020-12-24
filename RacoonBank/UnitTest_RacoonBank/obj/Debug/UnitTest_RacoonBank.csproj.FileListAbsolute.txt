@@ -1,0 +1,17 @@
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\UnitTest_RacoonBank.dll
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\UnitTest_RacoonBank.pdb
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\01-RacoonBank.exe
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\01-RacoonBank.pdb
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\01-RacoonBank.exe.config
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\obj\Debug\UnitTest_RacoonBank.csprojAssemblyReference.cache
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\obj\Debug\UnitTest_RacoonBank.csproj.CoreCompileInputs.cache
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\obj\Debug\UnitTest_RacoonBank.csproj.CopyComplete
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\obj\Debug\UnitTest_RacoonBank.dll
+C:\Users\tarep\Documents\CSharp_Alura\CSharp_Alura\RacoonBank\UnitTest_RacoonBank\obj\Debug\UnitTest_RacoonBank.pdb
