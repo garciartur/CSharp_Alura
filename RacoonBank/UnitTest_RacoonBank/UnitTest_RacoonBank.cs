@@ -67,7 +67,7 @@ namespace UnitTest_RacoonBank
         [TestInitialize]
         public void Initializer()
         {
-            designer = new Designer(2500, "481.963.574-14");
+            designer = new Designer(2500, "576.102.040-80");
         }
 
         [TestMethod]
@@ -92,6 +92,45 @@ namespace UnitTest_RacoonBank
 
             //act     
             double ret = designer.GetBonus();
+
+            //assert
+            Assert.AreEqual(ret, bonus);
+        }
+    }
+
+    [TestClass]
+    public class UnitTest_Assistant
+    {
+        Assistant assistant;
+
+        [TestInitialize]
+        public void Initializer()
+        {
+            assistant = new Assistant(1500, "569.388.690-57");
+        }
+
+        [TestMethod]
+        public void TestIncreaseSalary_ShouldReturnEmpSalaryPlusTenPercent()
+        {
+            //arrange
+            double increasedSalary = assistant.EmpSalary * 1.1;
+
+            //act
+            assistant.increaseSalary();
+            double ret = assistant.EmpSalary;
+
+            //assert
+            Assert.AreEqual(ret, increasedSalary);
+        }
+
+        [TestMethod]
+        public void TestGetBonus_ShouldReturnTwentyPercentofEmpSalary()
+        {
+            //arrange
+            double bonus =  assistant.EmpSalary * 0.2;
+
+            //act     
+            double ret = assistant.GetBonus();
 
             //assert
             Assert.AreEqual(ret, bonus);
