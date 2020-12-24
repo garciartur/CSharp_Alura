@@ -136,4 +136,43 @@ namespace UnitTest_RacoonBank
             Assert.AreEqual(ret, bonus);
         }
     }
+
+    [TestClass]
+    public class UnitTest_Developer
+    {
+        Developer developer;
+
+        [TestInitialize]
+        public void Initializer()
+        {
+            developer = new Developer(3650, "563.373.980-92");
+        }
+
+        [TestMethod]
+        public void TestIncreaseSalary_ShouldReturnEmpSalaryPlusFifteenPercent()
+        {
+            //arrange
+            double increasedSalary = developer.EmpSalary * 1.15;
+
+            //act
+            developer.increaseSalary();
+            double ret = developer.EmpSalary;
+
+            //assert
+            Assert.AreEqual(ret, increasedSalary);
+        }
+
+        [TestMethod]
+        public void TestGetBonus_ShouldReturnTenPercentofEmpSalary()
+        {
+            //arrange
+            double bonus = developer.EmpSalary * 0.1;
+
+            //act     
+            double ret = developer.GetBonus();
+
+            //assert
+            Assert.AreEqual(ret, bonus);
+        }
+    }
 }
