@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\01-RacoonBank"
+    "\\01-RacoonBank",
+    "\\01-RacoonBank\\Systems",
+    "\\UnitTest_RacoonBank"
   ],
   "SelectedNode": "\\RacoonBank.sln",
   "PreviewInSolutionExplorer": false
