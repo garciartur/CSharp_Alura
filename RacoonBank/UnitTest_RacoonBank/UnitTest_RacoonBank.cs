@@ -257,35 +257,52 @@ namespace UnitTest_RacoonBank
     [TestClass]
     public class UnitTest_AuthenticableEmployee
     {
-        AccountManager accountManager;
-        Director director;
-        CommercialPartner commercialPartner;
-        Designer designer;
+        AccountManager authenticableUser;
 
         [TestInitialize]
         public void Initializer()
         {
-            accountManager = new AccountManager(6500, "743.458.090-96");
-            director = new Director(20500, "919.660.790-44");
-            commercialPartner = new CommercialPartner();
-            designer = new Designer(2500, "576.102.040-80");
-
+            authenticableUser = new AccountManager(6500, "743.458.090-96");
         }
 
         [TestMethod]
         public void TestAuthenticate_WhenPassowrdIsWrong_ShouldReturnFalse()
         {
             //arrange
-            accountManager.Password = "123456";
+            authenticableUser.Password = "123456";
             string wrongPassword = "654321";
 
             //act
-            bool ret = accountManager.Authenticate(wrongPassword);
+            bool ret = authenticableUser.Authenticate(wrongPassword);
+
+            //assert
+            Assert.IsFalse(ret);
+        }       
+    }
+
+    [TestClass]
+    public class UnitTest_CommercialPartner
+    {
+        CommercialPartner commercialPartner;
+
+        [TestInitialize]
+        public void Initializer()
+        {
+            commercialPartner = new CommercialPartner();
+        }
+
+        [TestMethod]
+        public void TestCommercialPartiner_WhenPassowrdIsWrong_ShouldReturnFalse()
+        {
+            //arrange
+            commercialPartner.Password = "654321";
+            string wrongPassword = "123456";
+
+            //act
+            bool ret = commercialPartner.Authenticate(wrongPassword);
 
             //assert
             Assert.IsFalse(ret);
         }
-
-       
     }
 }
