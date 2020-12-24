@@ -253,4 +253,39 @@ namespace UnitTest_RacoonBank
             Assert.AreEqual(ret, bonus);
         }
     }
+
+    [TestClass]
+    public class UnitTest_AuthenticableEmployee
+    {
+        AccountManager accountManager;
+        Director director;
+        CommercialPartner commercialPartner;
+        Designer designer;
+
+        [TestInitialize]
+        public void Initializer()
+        {
+            accountManager = new AccountManager(6500, "743.458.090-96");
+            director = new Director(20500, "919.660.790-44");
+            commercialPartner = new CommercialPartner();
+            designer = new Designer(2500, "576.102.040-80");
+
+        }
+
+        [TestMethod]
+        public void TestAuthenticate_WhenPassowrdIsWrong_ShouldReturnFalse()
+        {
+            //arrange
+            accountManager.Password = "123456";
+            string wrongPassword = "654321";
+
+            //act
+            bool ret = accountManager.Authenticate(wrongPassword);
+
+            //assert
+            Assert.IsFalse(ret);
+        }
+
+       
+    }
 }
