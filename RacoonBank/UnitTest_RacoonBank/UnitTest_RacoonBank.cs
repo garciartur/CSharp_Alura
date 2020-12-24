@@ -1,5 +1,6 @@
 ﻿using _01_RacoonBank;
 using _01_RacoonBank.Employees;
+using _01_RacoonBank.Systems;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -292,7 +293,7 @@ namespace UnitTest_RacoonBank
         }
 
         [TestMethod]
-        public void TestCommercialPartiner_WhenPassowrdIsWrong_ShouldReturnFalse()
+        public void TestAuthenticate_WhenPassowrdIsWrong_ShouldReturnFalse()
         {
             //arrange
             commercialPartner.Password = "654321";
@@ -300,6 +301,34 @@ namespace UnitTest_RacoonBank
 
             //act
             bool ret = commercialPartner.Authenticate(wrongPassword);
+
+            //assert
+            Assert.IsFalse(ret);
+        }
+    }
+
+    [TestClass]
+    public class UnitTest_InternalSystem
+    {
+        InternalSystem user;
+        Director director;
+
+        [TestInitialize]
+        public void Initializer()
+        {
+            director = new Director(20500, "919.660.790-44");
+            user = new InternalSystem();
+        }
+
+        [TestMethod]
+        public void TestLogin_WhenPassowrdIsWrong_ShouldReturnFalse()
+        {
+            //arrange
+            director.Password = "abcdef";
+            string wrongPassword = "fedcba";
+
+            //act
+            bool ret = user.Login(director, wrongPassword);
 
             //assert
             Assert.IsFalse(ret);

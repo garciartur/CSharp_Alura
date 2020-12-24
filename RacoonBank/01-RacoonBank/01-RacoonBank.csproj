@@ -48,7 +48,6 @@
     <Compile Include="CommercialPartner.cs" />
     <Compile Include="Employees\AccountManager.cs" />
     <Compile Include="Employees\Assistant.cs" />
-    <Compile Include="Employees\Authenticable.cs" />
     <Compile Include="Employees\AuthenticableEmployee.cs" />
     <Compile Include="Systems\IAuthenticable.cs" />
     <Compile Include="Employees\Designer.cs" />

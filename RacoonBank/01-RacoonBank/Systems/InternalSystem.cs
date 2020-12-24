@@ -9,7 +9,7 @@ namespace _01_RacoonBank.Systems
 {
     public class InternalSystem
     {
-        public bool Login(Authenticable authenticable, string password)
+        public bool Login(AuthenticableEmployee authenticable, string password)
         {
             bool authenticatedUser = authenticable.Authenticate(password);
 
