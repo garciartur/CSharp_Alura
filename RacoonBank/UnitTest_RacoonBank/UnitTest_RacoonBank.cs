@@ -175,4 +175,43 @@ namespace UnitTest_RacoonBank
             Assert.AreEqual(ret, bonus);
         }
     }
+
+    [TestClass]
+    public class UnitTest_Director
+    {
+        Director director;
+
+        [TestInitialize]
+        public void Initializer()
+        {
+            director = new Director(20500, "919.660.790-44");
+        }
+
+        [TestMethod]
+        public void TestIncreaseSalary_ShouldReturnEmpSalaryPlusFifteenPercent()
+        {
+            //arrange
+            double increasedSalary = director.EmpSalary * 1.15;
+
+            //act
+            director.increaseSalary();
+            double ret = director.EmpSalary;
+
+            //assert
+            Assert.AreEqual(ret, increasedSalary);
+        }
+
+        [TestMethod]
+        public void TestGetBonus_ShouldReturnEmpSalary()
+        {
+            //arrange
+            double bonus = director.EmpSalary;
+
+            //act     
+            double ret = director.GetBonus();
+
+            //assert
+            Assert.AreEqual(ret, bonus);
+        }
+    }
 }
